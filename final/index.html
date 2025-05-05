@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lights Out – Bhanu Sumanth Reddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Lights Out</h1>
+      <p class="subtitle">by Bhanu Sumanth Reddy</p>
+    </header>
+
+    <main>
+      <section class="instructions">
+        <h2>Game Instructions</h2>
+        <ul>
+          <li>Click any tile to toggle it and its adjacent tiles (up, down, left, right).</li>
+          <li>The goal is to turn <strong>off all the black tiles</strong>.</li>
+          <li>Each game starts with a random but solvable board.</li>
+          <li>Timer and move counter help you track progress.</li>
+        </ul>
+      </section>
+
+      <div class="controls">
+        <button id="restart">Start New Game</button>
+        <div id="status">
+          <span>Moves: <strong id="moveCount">0</strong></span>
+          <span>Time: <strong id="timeElapsed">0:00</strong></span>
+        </div>
+      </div>
+
+      <div id="board"></div>
+    </main>
+
+    <section class="addendum">
+      <h2>Addendum</h2>
+      <p>The Lights Out project exists as a HTML-CSS-JavaScript creation. The game presents players with a 5x5 tile grid that causes tile state changes alongside corresponding adjacent tile state toggling during user clicks. The main goal of the game requires lights to be turned off so the underlying area becomes visible.</p>
+
+        <p>I incorporated tracking of user moves along with a timer combined with a solveable board which operates randomly. The application displays a clean and responsive user interface. I selected a full-screen Unsplash image for the background while applying hover effects and border radius together with transitions for styling the grid tiles.</p>
+        
+       <p>Creating a proper method to prevent winning alerts by mistake required me to enforce checks only following actual user actions. Through this project I mastered three essential DOM manipulation concepts and grid-based logic and time/move-based feedback development in JavaScript.</p>
+    </section>
+
+    <footer>
+      <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
